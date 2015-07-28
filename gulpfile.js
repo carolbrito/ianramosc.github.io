@@ -11,7 +11,7 @@ gulp.task('html', function() {
 });
 
 gulp.task('css', function() {
-	gulp.src('./dev/css/**/*.styl')
+	gulp.src('./dev/css/main.styl')
 		.pipe(stylus({
 			compress: true
 		}))
@@ -20,5 +20,5 @@ gulp.task('css', function() {
 
 gulp.task('default', ['html', 'css'], function() {
 	gulp.watch('./dev/jade/*.jade', 	['html']);
-	gulp.watch('./dev/css/**/*.styl', ['css']);
+	gulp.watch('./dev/css/main.styl', ['css']);
 });
